@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join our Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+  <style>
+    #bt {
+      width: 100%;
+      background-color: rgb(0, 255, 255);
+      color: black;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: Orbitron;
+      font-weight: bold;
+      font-size: 17px;
+      transition: 0.2s;
+
+    }
+
+    #bt:hover {
+      color: white;
+      transform: scale(1.03);
+    }
+
+    input[type="radio"] {
+      accent-color: rgb(0, 255, 255);
+      transition: 0.2s;
+    }
+
+    input[type="radio"]:hover {
+      transform: scale(1.4);
+    }
+
+    input {
+      transition: 0.2s;
+    }
+
+    input:hover {
+      transform: scale(1.03);
+    }
+
+    textarea {
+      transition: 0.2s;
+    }
+
+    textarea:hover {
+      transform: scale(1.03);
+    }
+
+    select {
+      transition: 0.2s;
+    }
+
+    select:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      width: 250px;
+      height: 50px;
+      display: inline-block;
+      text-align: center;
+      justify-content: center;
+      margin-right: 30px;
+      transition: 0.3s ease;
+      font-weight: bold;
+      transition-property: text-shadow;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+    }
+
+    h3 {
+      text-align: center;
+      justify-content: center;
+      transition: 0.3s ease;
+
+    }
+    h3:hover {
+     transform: scale(1.1); 
+    }
+    h2:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 3px 1.5px rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body
+  style="background:radial-gradient(circle at center, rgba(3, 29, 44, 1) 0%, rgba(2, 11, 18, 1) 100%);font-family: orbitron;justify-content: center;align-items: center;display: flex;">
+
+  <h2 style="margin-bottom: 15px;font-size: 25px;justify-content: center;color: rgb(0, 255, 255);margin-top: 0;font-weight: bolder;display: inline-block;"> Krif AI & Robotics Company </h2>
+  <form action="#" method="post"
+    style="width: 350px; border:3px solid rgb(0, 255, 255); padding: 20px; border-radius: 8px; background-color:white;font-size: 15px;">
+    <h3
+      style="margin-bottom: 15px;font-size: 25px;justify-content: center;color: rgb(0, 255, 255);margin-top: 0;font-weight: bolder;align-items: center;">
+      Join us
+    </h3>
+
+    <label style="width: 335px;">First Name</label><br>
+    <input type="text" name="firstname"
+      style="width: 335px; padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;font-size: 13px;"><br>
+
+    <label>Last Name</label><br>
+    <input type="text" name="lastname"
+      style="width: 335px; padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;font-size: 13px;"><br>
+    <label>Email</label><br>
+    <input type="email" name="email"
+      style="width: 335px; padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;font-size: 13px;"><br>
+
+    <label>Gender</label><br>
+    <input type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="female"> Prefer not to say<br><br>
+
+    <label>Field you are associated with</label><br>
+    <select name="field"
+      style="width:100%; padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;">
+      <option class="active">AI Engineering</option>
+      <option>Software Engineering</option>
+      <option>Robotics Engineering</option>
+      <option>Web Development</option>
+      <option>Data Science</option>
+      <option>More</option>
+    </select><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password"
+      style="width: 335px; padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;font-size: 13px;"><br>
+
+    <label>Your Comment</label><br>
+    <textarea name="request" rows="4"
+      style="width:335px;padding:8px; background-color:#f5f7ff; border: 2px solid #33c6c9; border-radius:4px; margin-top:5px; margin-bottom:15px;font-family: Orbitron;font-size: 13px;"></textarea><br>
+
+    <button id="bt" type="submit" style="width: 355px;">
+      Submit
+    </button>
+  </form>
+</body>
+
+</html>

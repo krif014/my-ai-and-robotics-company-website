@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krif Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=star">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Orbitron, sans-serif;
+        }
+
+        body {
+            background: #020B12;
+            background: radial-gradient(circle at center, rgba(3, 29, 44, 1) 0%, rgba(2, 11, 18, 1) 100%);
+            z-index: -1;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        .company {
+            color: white;
+            display: inline-block;
+            padding-left: 3px;
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 10px;
+            padding-top: 10px;
+        }
+
+        .logo {
+            display: flex;
+            padding-top: 10px;
+            padding-left: 0px;
+        }
+
+        .a {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 0px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 150px;
+            padding-left: 150px !important;
+            z-index: 1000;
+            position: sticky;
+            top: 0px;
+            background-color: transparent;
+            height: 65px;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav {
+            align-items: center;
+            gap: 25px;
+            padding-left: 0px;
+            display: flex;
+            margin-left: auto;
+            padding-right: 40px;
+            height: 90px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 4px 3px;
+            font-size: 16px;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: rgb(0, 255, 255);
+            transform: translateY(-10px);
+
+        }
+
+
+        .btn {
+            padding-right: 17px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 17px !important;
+            background: rgb(4, 224, 224);
+            color: #000;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.5s;
+            padding-left: 10px;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+
+        .nav a.active {
+            color: rgb(4, 224, 224);
+        }
+
+
+
+        .rating {
+            padding-top: 20px;
+            display: inline;
+            width: 360px;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            padding-left: 4px;
+            gap: 15px;
+        }
+
+        .rating p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(186, 186, 186);
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .rating .stars {
+            color: rgb(0, 255, 255);
+            display: inline-block;
+            padding-top: 2px !important;
+            padding-bottom: 1px !important;
+            font-size: 24px;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+
+
+        .info {
+            color: white;
+            font-size: 12px;
+            display: flex;
+            height: 35px;
+            align-items: center;
+            background-color: transparent;
+            padding-right: 150px !important;
+            padding-left: 150px !important;
+            z-index: 1000;
+            gap: 25px;
+            margin: 0px;
+            border-bottom: 0.01px solid rgb(14, 75, 75);
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .info:hover {
+            border-bottom: 0.01px solid rgb(14, 75, 75);
+            transform: translateY(2px);
+        }
+
+        .info p {
+            font-family: roboto;
+            transition: 0.3s;
+            font-size: 10px;
+
+        }
+
+        .info p:hover {
+            color: rgb(0, 255, 255);
+            transform: scale(1.1);
+        }
+
+        .info a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-icons {
+            margin-left: auto;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            transition: 0.3s;
+            object-fit: cover;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.3);
+        }
+
+        .wa :hover {
+            color: rgb(0, 255, 0);
+        }
+
+        .ins :hover {
+            color: #c705a0;
+        }
+
+        .lin :hover {
+            color: #07a7c3;
+        }
+
+        .pshow {
+            font-weight: bold;
+            display: inline-block;
+            height: 200px;
+            width: 230px;
+            padding-top: 80px;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+        }
+
+        .pshow p {
+            transition: text-shadow 0.3s ease;
+        }
+
+        .pshow p:hover {
+            transform: scale(1.1);
+            color: rgb(0, 255, 255);
+            text-shadow: 0 5px 25px rgba(255, 255, 255, 1);
+        }
+
+
+        .down {
+            margin-left: 150px;
+            margin-right: 150px;
+            height: 410.8px;
+            padding-top: 100px !important;
+            backdrop-filter: blur(100px);
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .basic {
+            width: 285px;
+            display: inline-block;
+            color: white;
+            cursor: pointer;
+        }
+
+        .basic p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p.ai {
+            transition: 0.3s ease;
+            color: rgb(235, 235, 235);
+        }
+
+        p.ai:hover {
+            transform: scale(1.1);
+            color: rgb(0, 255, 255);
+        }
+
+        .me {
+            display: flex;
+            gap: 25px;
+        }
+
+        footer {
+            display: flex;
+            color: white;
+            margin-top: 40px;
+            font-size: 20px;
+            gap: 720px;
+            margin-left: 0px;
+            align-items: center;
+
+        }
+
+        footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(235, 235, 235);
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+        footer p span {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(235, 235, 235);
+            font-size: 12px;
+            font-weight: lighter;
+            transition: 0.3s ease;
+        }
+
+        footer p span:hover {
+            color: rgb(0, 255, 255);
+        }
+
+
+        .spacer {
+            height: 380px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+            margin-right: 150px;
+            padding-top: 120px;
+            padding-left: 410px;
+
+        }
+
+        .spacer h1 {
+            color: white;
+            font-family: Orbitron;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .customer {
+            height: 920px;
+            background: rgba(0, 0, 0, 0.4);
+            padding-left: 190px;
+            padding-right: 110px;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .hi {
+            display: flex;
+            height: 214px;
+            gap: 40px;
+            width: 1270px;
+            margin-bottom: 40px;
+
+        }
+
+        .how {
+            width: 352px;
+            border-radius: 12px;
+            border: 0.00001px solid rgb(14, 75, 75);
+            height: 214px;
+            background: #000000;
+            padding-left: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+        }
+
+        .statics {
+            height: 400px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-bottom: 40px;
+            padding-top: 85px;
+
+
+        }
+
+        .wa {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 217px;
+            width: 100%;
+            border-top: 0.0001px solid rgb(14, 75, 75);
+            border-bottom: 0.0001px solid rgb(14, 75, 75);
+
+        }
+
+
+        .more {
+            width: 284.55px;
+            height: 77.5px;
+            border-right: 0.0000001px solid rgb(14, 75, 75);
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .clip {
+            background: rgba(255, 255, 255, 0.1);
+            bottom: 0;
+            right: 0;
+            width: 35%;
+            height: 55%;
+            clip-path: ellipse(90% 90% at 100% 100%);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .clip img {
+
+            z-index: 1;
+            position: absolute;
+            height: 80px;
+            width: 60px;
+            bottom: 0;
+            right: 0;
+            margin-right: 10px;
+        }
+
+        .how:hover {
+            transform: scale(1.03);
+            border: 0.00001px solid rgb(0, 255, 255);
+        }
+
+        .fine {
+            transition: 0.3s ease;
+        }
+
+        .fine:hover {
+            transform: translateX(7px);
+        }
+
+        .pro {
+            height: 1000px;
+            width: 100%;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 100px;
+
+        }
+
+        .wow {
+            width: 100%;
+            height: 497px;
+            gap: 40px;
+            display: flex;
+            margin-top: 57px;
+
+        }
+
+        .yu img {
+            width: 550px;
+            height: 374px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .bo {
+            width: 400px;
+            border-radius: 12px;
+            border: 0.00001px solid rgb(14, 75, 75);
+            height: 214px;
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+            cursor: pointer;
+            margin-left: 74.3px;
+            margin-top: -76px;
+
+        }
+
+        .si {
+            transition: 0.3s ease;
+        }
+
+        .si:hover {
+            transform: scale(1.1);
+        }
+         
+      .bt {
+            padding: 8px 16px;
+            padding-right: 29px;
+            padding-left: 29px !important;
+            background: rgb(4, 224, 224);
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.5s;
+            width: 230px;
+            cursor: pointer;
+            border: none;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            height: 49px;
+            margin-left: 5px;
+            margin-left: 455px;
+            margin-top: 105px;
+        }
+
+        .bt:hover {
+            color: white;
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <a href="tel:+250783288353">
+            <p>&#x260E; +250 783288353</p>
+        </a>
+        <a href="mailto:krif014@gmail.com">
+            <p> &#x2709; krif014@gmail.com</p>
+        </a>
+        <a
+            href="https://maps.google.com/maps/search/%D0%93%D0%BE%D1%82%D0%B5%D0%BB%D1%8C+Kigali+%D0%A0%D1%83%D0%B0%D0%BD%D0%B4%D0%B0/?entry=wc&hl=fr_CA&gl=CA">
+            <p>&#x1F30E; Kigali,Rwanda</p>
+        </a>
+
+        <div class="social-icons">
+            <a href="https://github.com/krif014" target="_blank" rel="noopener" aria-label="facebook" class="git"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/uwimana-krif-91694338a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_notifications%3BrgrBaiFzSJGSiGvNo06q6Q%3D%3D"
+                target="_blank" rel="noopener" aria-label="twitter" class="lin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/krif_014_/#" target="_blank" rel="noopener" aria-label="instagram"
+                class="ins"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener" aria-label="whatsapp" class="wa"><i
+                    class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="Screenshot2026-01-06074914.png" alt="Krif Company Logo" width="40" height="40">
+            <p class="company"><span class="a">KRIF</span><br><small>AI & ROBOTICS</small></p>
+        </div>
+        <nav class="nav">
+            <a href="infinity.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="#" class="active">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <a href="inquiry.html" class="btn">Join now</a>
+    </header>
+
+    <div class="spacer">
+        <h1>Our Services</h1>
+    </div>
+
+    <div class="customer">
+        <div class="hi">
+            <div class="how">
+                <div class="clip"><img src="Screenshot_2026-01-15_152811-removebg-preview.png" alt="ico"></div>
+                <h2
+                    style="font-family: orbitron, sans-serif;font-size:20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Robotic Automation</h2>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    The use of programmable machines to perform repetitive tasks with speed and precision, reducing
+                    human effort and improving efficiency.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot_0260115_153759removebgpreview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    AI Data Analytics</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    uses artificial intelligence to analyze large datasets, uncover patterns, and support faster,
+                    smarter decision-making.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot20260115_201842removebgpreview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Computer vision</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    Enables machines to interpret and understand visual information from images and videos to make
+                    intelligent decisions.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+        </div>
+        <div class="hi">
+            <div class="how">
+                <div class="clip"><img src="Screenshot_0260115_153505removebgpreview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Internet Of Things</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    We connect physical devices to the internet, enabling them to collect, share, and act on data
+                    automatically.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot_2026-01-15_152934-removebg-preview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    AI For Conservation</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    The use of intelligent data analysis to monitor ecosystems, protect wildlife, and support
+                    sustainable management of natural resources. </p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot_0260115_15312removegpreview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Machine Learning</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    We train computers to learn from data and improve their performance over time without being
+                    explicitly programmed.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+        </div>
+        <div class="hi">
+            <div class="how">
+                <div class="clip"><img src="Screenshot_2026-01-15_160047-removebg-preview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Industrial Automation</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    The use of programmable machines to perform repetitive tasks with speed and precision, reducing
+                    human effort and improving efficiency.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot_026-0115_154106rmovebgpreview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Virtual Assistants</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    Are AI-powered systems that understand user requests and perform tasks such as answering questions,
+                    scheduling, and providing support. </p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+            <div class="how">
+                <div class="clip"><img src="Screenshot_2026-01-15_155928-removebg-preview.png" alt="ico"></div>
+                <h3
+                    style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 30px;font-weight: bold;">
+                    Autonomous Systems</h3>
+                <p
+                    style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(235, 235, 235);padding-bottom: 13px;">
+                    Are intelligent technologies that can operate and make decisions independently with little or no
+                    human intervention.</p>
+                <p style="font-family:orbitron, sans-serif;font-size: 14px;color: rgb(0, 255, 255);padding-bottom: 22px;"
+                    class="fine">
+                    Learn More &#8594;</p>
+            </div>
+        </div>
+    </div>
+    <div class="pro">
+        <h3 style="font-size: 45px;width: 800px;color: #ffffff;text-align: center;margin-left: 215px;">Our Completed
+            <span style="color: rgb(0, 255, 255);">Projects</span>
+        </h3>
+        <p
+            style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);margin-top:23px;margin-left: 240px;">
+            They reflect our expertise in delivering reliable, innovative solutions.
+            They demonstrate real-world<br><span
+                style="padding-left: 180px;font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);">impact,
+                quality execution, and client satisfaction.</span>
+        </p>
+        <div class="wow">
+            <div class="yu">
+                <img src="Screenshot2026-01-16074642.png" alt="no">
+                <div class="bo">
+                    <p
+                        style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 25px;font-weight: bold;color:#ffffff;padding-left: 100px;">
+                        Drone Technology</p>
+                    <p
+                        style="font-family:Arial, Helvetica, sans-serif;font-size: 16px;padding-bottom: 18px;margin-top: 5px;color: rgb(207, 207, 207);padding-left: 15px;">
+                        Combines AI, sensors, and automation to perform precise aerial monitoring, mapping, and data
+                        collection.
+                        It enables safer, faster, and more efficient operations across multiple industries.</p>
+                    <p style="font-family: orbitron, sans-serif;font-size: 14px;padding-bottom: 18px;margin-top: 5px;color: rgb(0, 255, 255);padding-left: 130px;"
+                        class="si">View Details &#8594;</p>
+                </div>
+            </div>
+            <div class="yu">
+                <img src="Screenshot2026-01-16080738.png" alt="no">
+                <div class="bo">
+                    <p
+                        style="font-family: orbitron, sans-serif;font-size: 20px;padding-bottom: 18px;margin-top: 25px;font-weight: bold;color:#ffffff;padding-left: 69px;">
+                        Agriculture Technology</p>
+                    <p
+                        style="font-family:Arial, Helvetica, sans-serif;font-size: 16px;padding-bottom: 18px;margin-top: 5px;color: rgb(207, 207, 207);padding-left: 15px;">
+                     This uses intelligent machines and data-driven systems to optimize farming operations.
+                     It improves crop yields, reduces labor, and supports sustainable, precision farming practices.
+                    </p>
+                    <p style="font-family: orbitron, sans-serif;font-size: 14px;padding-bottom: 18px;margin-top: 5px;color: rgb(0, 255, 255);padding-left: 130px;"
+                        class="si">View Details &#8594;
+                    </p>
+                </div>
+            </div>
+        </div>
+       
+        <button class="bt">View All Project</button> 
+
+    </div>
+
+                 
+
+    <div class="statics">
+        <div class="wa">
+            <div class="more">
+                <img src="Screenshot_2026-01-16_090239-removebg-preview.png" alt="krif" height="60" width="90"
+                    style="margin-top: 5px;">
+                <div>
+                    <p
+                        style="font-family:orbitron, sans-serif;font-size: 35px;padding-bottom: 2px;color: #ffffff;font-weight: bold;">
+                        500+</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);">
+                        Trusted Partner</p>
+                </div>
+            </div>
+            <div class="more">
+                <img src="Screenshot_2026-01-16_090042-removebg-preview.png" alt="krif" height="60" width="60"
+                    style="margin-top: 5px;gap:30px;">
+                <div>
+                    <p
+                        style="font-family:orbitron, sans-serif;font-size: 35px;padding-bottom: 2px;color: #ffffff;font-weight: bold;">
+                        200k+</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);">
+                        Worldwide User</p>
+                </div>
+            </div>
+            <div class="more">
+                <img src="Screenshot_2026-01-16_085517-removebg-preview.png" alt="krif" height="60" width="60"
+                    style="margin-top: 5px;">
+                <div>
+                    <p
+                        style="font-family:orbitron, sans-serif;font-size: 35px;padding-bottom: 2px;color: #ffffff;font-weight: bold;">
+                        25+</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);">
+                        Years Of Experience</p>
+                </div>
+            </div>
+            <div class="more" style="border-right: 0px;">
+                <img src="Screenshot_2026-01-16_085437-removebg-preview.png" alt="krif" height="60" width="60"
+                    style="margin-top: 5px;">
+                <div>
+                    <p
+                        style="font-family:orbitron, sans-serif;font-size: 35px;padding-bottom: 2px;color: #ffffff;font-weight: bold;">
+                        35+</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;font-size: 17px;color: rgb(207, 207, 207);">
+                        International Awards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="down">
+        <div class="me">
+            <div class="basic">
+                <div class="logo">
+                    <img src="Screenshot2026-01-06074914.png" alt="Krif Company Logo" width="40" height="40">
+                    <p class="company"><span class="a">KRIF</span><br><small>AI & ROBOTICS</small></p><br>
+                </div>
+                <p
+                    style="margin-top: 4px;font-size: 12px; font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                    Innovate. Integrate.
+                    Elevate.</p>
+            </div>
+            <div class="basic">
+                <p style="font-size: 20px;margin-bottom: 40px;font-family: Orbitron;">About Company</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">About Us</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">Services</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">Our Features</p>
+                <p style="font-size: 16px;margin-bottom: 8px;padding-bottom: 8px!important;" class="ai">Blog & Insights
+                </p>
+            </div>
+            <div class="basic">
+                <p style="font-size: 20px;margin-bottom: 40px;font-family: Orbitron;">Contact Info</p>
+                <p style="font-size: 16px;color: rgb(235, 235, 235);margin-bottom: 20px;">Feel free to contact & reach
+                    us !
+                </p>
+                <p style="font-size: 16px;margin-bottom: 10px;" class="ai">Adress:14th
+                    Streets,Nyarugenge</p>
+                <p style="font-size: 16px;margin-bottom: 10px;" class="ai">Email:krif014@gmail.com
+                </p>
+                <p style="font-size: 16px;margin-bottom: 10px;" class="ai">Phone:+250 783-288-353
+                </p>
+                <p style="font-size: 16px;margin-bottom: 10px;" class="ai">Post Office:P.O.BOX
+                    2026</p>
+            </div>
+            <div class="basic">
+                <p style="font-size: 20px;margin-bottom: 40px;font-family: Orbitron;">Our Portifolio</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">Robotic Automation</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">Industrial Robot</p>
+                <p style="font-size: 16px;margin-bottom: 10px;border-bottom: 0.01px solid rgb(14, 75, 75);padding-bottom: 10px!important;"
+                    class="ai">Surgical Robotics</p>
+                <p style="font-size: 16px;margin-bottom: 10px;padding-bottom: 10px!important;" class="ai">Advance
+                    Sensors
+                </p>
+            </div>
+        </div>
+        <footer>
+            <div class="social-icons">
+                <a href="https://github.com/krif014" target="_blank" rel="noopener" aria-label="facebook" class="git"
+                    style="color: white;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/uwimana-krif-91694338a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_notifications%3BrgrBaiFzSJGSiGvNo06q6Q%3D%3D"
+                    target="_blank" rel="noopener" aria-label="twitter" class="lin" style="color: white;"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/krif_014_/#" target="_blank" rel="noopener" aria-label="instagram"
+                    class="ins" style="color: white"><i class="fab fa-instagram"></i></a>
+                <a href="https://whatsapp.com" target="_blank" rel="noopener" aria-label="whatsapp" class="wa"
+                    style="color: white;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div>
+                <p>All rights reserved &#169; 2026 Krif AI & Robotics.Powered by <span>Krif Group</span></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
